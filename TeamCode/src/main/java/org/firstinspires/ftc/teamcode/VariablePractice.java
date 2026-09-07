@@ -19,9 +19,9 @@ public class VariablePractice extends OpMode {
     public void init() {
         //Variable name, lower first Word, upper Second word
         int teamNumber =17181;
-        string teamName = "xxxxx"
-        double motoSpeed=0.75;
-        boolean clawClosed=true;
+        string teamName = "Vibranium Vikings";
+        double motoSpeed = 0.75;
+        boolean clawClosed = true;
         string coachName="Nihar";
 
         telemetry.addData("Team Number", teamNumber);

@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@Disabled
+//@Disabled
 @TeleOp
 public class GamepadPractice extends OpMode {
 
@@ -18,17 +18,23 @@ public class GamepadPractice extends OpMode {
     @Override
     public void loop() {
         // run 2 times of the second
-        double speedForward = gamepad1.left_stick_y / 2.0;  //make it half power
-        double diffXJoysticks = gamepad1.left_stick_x-gamepad1.right_stick_x;
-        double sumTriggers = gamepad1.left_trigger+gamepad1.right_trigger;
+        double speedForward = -gamepad1.left_stick_y / 2.0;
+        double differenceX = gamepad1.left_stick_x - gamepad1.right_stick_x;
+        double sumTriggers = gamepad1.right_trigger + gamepad1.left_trigger;
 
-        telemetry.addData("left stick x",gamepad1.left_stick_x);
-        telemetry.addData("left stick y",gamepad1.left_stick_y);
+        telemetry.addData("left x",gamepad1.left_stick_x);
+        telemetry.addData("left y",speedForward);
+        telemetry.addData("right x",gamepad1.right_stick_x);
+        telemetry.addData("right y",gamepad1.right_stick_y);
+        telemetry.addData("difference x",differenceX);
+        telemetry.addData("Sum Trigger",sumTriggers);
+
+
         telemetry.addData("a button",gamepad1.a);
-
-        telemetry.addData("speed forward",speedForward);
-        telemetry.addData("difference x",diffXJoysticks);
-        telemetry.addData("sum triggers",sumTriggers);
+        telemetry.addData("b button", gamepad1.b);
 
     }
+
+
+
 }
