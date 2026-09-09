@@ -1,8 +1,10 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+@Disabled
 @TeleOp
 
 //Class Name, capital first word
@@ -19,10 +21,10 @@ public class VariablePractice extends OpMode {
     public void init() {
         //Variable name, lower first Word, upper Second word
         int teamNumber =17181;
-        string teamName = "Vibranium Vikings";
+        String teamName = "Vibranium Vikings";
         double motoSpeed = 0.75;
         boolean clawClosed = true;
-        string coachName="Nihar";
+        String coachName="Nihar";
 
         telemetry.addData("Team Number", teamNumber);
         telemetry.addData("Team Name", teamName);
